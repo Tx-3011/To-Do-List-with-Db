@@ -8,13 +8,10 @@ require('dotenv').config()
 
 app.use(express.json())
 app.use('/api/v1/tasks',tasks)
+app.use(express.static('./public'))
 
 // routes
 
-app.get('/hello',(req,res)=>{
-    res.send("<h1>Task Manager App</h1>")
-    res.end()
-})
 
 // app.get get all tasks
 // app.post create task
